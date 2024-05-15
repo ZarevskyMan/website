@@ -8,9 +8,8 @@ hostName = os.environ['MY_IP']
 serverPort = int(os.environ['MY_PORT'])
 log_path = os.environ['MY_LOG']
 config_path = '/usr/share/cool-app/'
-content_file = '{0}cool-text.txt'.format(config_path)
+content_file = '{0}my-text.txt'.format(config_path)
 # serverPort = 8080
-
 
 class MyServer(BaseHTTPRequestHandler):
 
