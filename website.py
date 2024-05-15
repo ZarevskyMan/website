@@ -4,9 +4,9 @@ import socket
 import time
 
 
-hostName = os.environ['COOL_IP']
-serverPort = int(os.environ['COOL_PORT'])
-log_path = os.environ['COOL_LOG']
+hostName = os.environ['MY_IP']
+serverPort = int(os.environ['MY_PORT'])
+log_path = os.environ['MY_LOG']
 config_path = '/usr/share/cool-app/'
 content_file = '{0}cool-text.txt'.format(config_path)
 # serverPort = 8080
@@ -18,7 +18,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type", "text/html")
         self.end_headers()
-        self.wfile.write(bytes("<html><head><title>Cool web application</title></head>", "utf-8"))
+        self.wfile.write(bytes("<html><head><title>Stepa's web application</title></head>", "utf-8"))
         self.wfile.write(bytes("<p>Request: %s</p>" % self.path, "utf-8"))
         self.wfile.write(bytes("<body>", "utf-8"))
         self.wfile.write(bytes("<p>{0}</p>".format(self.read_file()), "utf-8"))
