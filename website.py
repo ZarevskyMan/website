@@ -25,7 +25,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.wfile.write(bytes("</body></html>", "utf-8"))
         self.write_log('site accessed from {0}'.format(self.client_address))
         if self.path != '/' and self.path != '/favicon.ico':
-            self.write_log('Request: {0}'.format(self.path))
+            self.write_log('Привет из моего докер-контейнера'.format(self.path))
 
 
     def read_file(self):
